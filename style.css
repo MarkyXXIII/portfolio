@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-color: rgb(20, 20, 20);
     font-family: Montserrat;
@@ -28,39 +32,49 @@ footer {
     z-index: 3;
 }
 
-a {
-    text-decoration: none;
-    color: seashell;
-    padding-left: 8px;
-    padding-right: 8px;
+/*-------------------------------------------------------------------------------------------------------------NEW CODE START*/
+
+.navbar {
+    font-size: 18px;
+    background-image: rgb(20, 20, 20);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
 }
 
-a:hover {
-    text-decoration: underline;
+.main-nav {
+    list-style-type: none;
+    display: none;
 }
 
-ul {
-    margin-top: 12px;
-}
-
-li {
-    display: inline;
-}
-
-li, a {
-    margin: 5px;
-}
-
+.nav-links,
 .logo {
-    float: left;
-    margin: 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.nav {
-    margin-top: 30px;
-    vertical-align: auto;
-    float: right;
-    margin: 10px;
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+a.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
 }
 
 .mainGrid {
@@ -103,7 +117,7 @@ li, a {
 }
 
 .aboutMe {
-    margin-top: -200px;
+    /*margin-top: -100px;*/
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
@@ -142,46 +156,55 @@ li, a {
     justify-content: space-evenly;
 }
 
+.skillsContainer a {
+    padding: 10px;
+}
+
 .socialsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-  @media(max-width: 970px) {
+.socialsContainer a {
+    padding: 10px;
+}
 
-    .aboutMe {
-        padding-top: 120px;
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
     }
 
-  }
-
-
-
-  @media(max-width: 700px) {
-
-    .aboutMe h1 {
-        font-size: 2em;
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
-    .aboutMe h3 {
-        font-size: 1.2em;
+    .main-nav li {
+        margin: 0;
     }
 
-    .nav li {
-        font-size: .7em;
-        padding-left: 2px;
-        padding-right: 2px;
-        margin: 2px;
+    .nav-links {
+        margin-left: 40px;
     }
 
     .logo {
-        width: 20%;
+        margin-top: -10px;
     }
 
-    /*.backgroundImage {
-        visibility: hidden;
-        background: url('images/codingBGportrait.jpg');
-    }*/
+    .navbar-toggle {
+        display: none;
+    }
 
-  }
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
