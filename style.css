@@ -15,7 +15,7 @@ header {
     background-color: rgb(20, 20, 20);
     border-bottom: 1px solid seashell;
     position: fixed;
-    height: 70px;
+    height: 72px;
     z-index: 999;
 }
 
@@ -37,8 +37,8 @@ footer {
 .navbar {
     font-size: 18px;
     background-image: rgb(20, 20, 20);
-    border: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
+    margin-top: -8px;
 }
 
 .main-nav {
@@ -49,20 +49,21 @@ footer {
 .nav-links,
 .logo {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
+    color: seashell;
+    padding: 10px;
 }
 
 .main-nav li {
     text-align: center;
-    margin: 15px auto;
+    margin: 5px auto;
 }
 
 a.logo {
     display: inline-block;
     font-size: 22px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 0px;
 }
 
 .navbar-toggle {
@@ -76,6 +77,9 @@ a.logo {
 
 .active {
     display: block;
+    height: auto;
+    background-color: rgb(20, 20, 20);
+    border-bottom: 1px solid seashell;
 }
 
 .mainGrid {
@@ -109,13 +113,8 @@ a.logo {
     grid-column-start: 1;
     grid-column-end: 4;
     opacity: 40%;
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    min-width: 1000px;
-    height: auto;
-    max-height: 1000px;
-    overflow: hidden;
+    height: 1000px;
+    width: auto;
     z-index: 2;
 }
 
@@ -186,6 +185,7 @@ a.logo {
     .main-nav {
         display: flex;
         margin-right: 30px;
+        margin-top: 10px;
         flex-direction: row;
         justify-content: flex-end;
     }
@@ -199,7 +199,7 @@ a.logo {
     }
 
     .logo {
-        margin-top: -10px;
+        margin-top: 10px;
     }
 
     .navbar-toggle {
