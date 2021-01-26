@@ -21,18 +21,17 @@ header {
 
 footer {
     display: flex;
-    justify-self: center;
+    justify-self: right;
     align-self: flex-end;
     margin-right: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     grid-row-start: 1;
     grid-row-end: 1;
-    grid-column-start: 2;
-    font-size: 0.5em;
+    grid-column-start: 3;
+    font-size: 0.4em;
     z-index: 3;
 }
-
-/*-------------------------------------------------------------------------------------------------------------NEW CODE START*/
 
 .navbar {
     font-size: 18px;
